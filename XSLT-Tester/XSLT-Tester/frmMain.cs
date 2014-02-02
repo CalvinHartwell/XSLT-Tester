@@ -16,5 +16,65 @@ namespace XSLT_Tester
         {
             InitializeComponent();
         }
+
+        private void lToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClearXSLT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveXSLTSheetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveOutputToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClearInput_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClearOutput_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLoadXMLInput_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLoadXSLTFromFile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPerformTransform_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLoadXMLOutput_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

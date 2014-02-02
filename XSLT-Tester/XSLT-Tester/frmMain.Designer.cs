@@ -28,123 +28,273 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpXMLInput = new System.Windows.Forms.GroupBox();
+            this.tbInput = new System.Windows.Forms.TextBox();
+            this.grpXSLT = new System.Windows.Forms.GroupBox();
+            this.tbXSLT = new System.Windows.Forms.TextBox();
+            this.grpXMLOutput = new System.Windows.Forms.GroupBox();
+            this.tbOutput = new System.Windows.Forms.TextBox();
+            this.btnClearInput = new System.Windows.Forms.Button();
+            this.btnClearOutput = new System.Windows.Forms.Button();
+            this.mainMenu = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLoadXSLTFromFile = new System.Windows.Forms.Button();
+            this.btnClearXSLT = new System.Windows.Forms.Button();
+            this.saveXSLTSheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveOutputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPerformTransform = new System.Windows.Forms.Button();
+            this.btnLoadXMLInput = new System.Windows.Forms.Button();
+            this.btnLoadXMLOutput = new System.Windows.Forms.Button();
+            this.grpXMLInput.SuspendLayout();
+            this.grpXSLT.SuspendLayout();
+            this.grpXMLOutput.SuspendLayout();
+            this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // grpXMLInput
             // 
-            this.button1.Location = new System.Drawing.Point(942, 347);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.grpXMLInput.Controls.Add(this.btnLoadXMLInput);
+            this.grpXMLInput.Controls.Add(this.btnClearInput);
+            this.grpXMLInput.Controls.Add(this.tbInput);
+            this.grpXMLInput.Location = new System.Drawing.Point(12, 27);
+            this.grpXMLInput.Name = "grpXMLInput";
+            this.grpXMLInput.Size = new System.Drawing.Size(358, 358);
+            this.grpXMLInput.TabIndex = 7;
+            this.grpXMLInput.TabStop = false;
+            this.grpXMLInput.Text = "XML Input";
             // 
-            // button2
+            // tbInput
             // 
-            this.button2.Location = new System.Drawing.Point(1023, 347);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.tbInput.Location = new System.Drawing.Point(8, 19);
+            this.tbInput.Multiline = true;
+            this.tbInput.Name = "tbInput";
+            this.tbInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbInput.Size = new System.Drawing.Size(341, 304);
+            this.tbInput.TabIndex = 1;
+            this.tbInput.Text = "Input XML";
             // 
-            // groupBox3
+            // grpXSLT
             // 
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Location = new System.Drawing.Point(12, 12);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(358, 329);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.grpXSLT.Controls.Add(this.btnPerformTransform);
+            this.grpXSLT.Controls.Add(this.btnClearXSLT);
+            this.grpXSLT.Controls.Add(this.btnLoadXSLTFromFile);
+            this.grpXSLT.Controls.Add(this.tbXSLT);
+            this.grpXSLT.Location = new System.Drawing.Point(376, 27);
+            this.grpXSLT.Name = "grpXSLT";
+            this.grpXSLT.Size = new System.Drawing.Size(358, 358);
+            this.grpXSLT.TabIndex = 8;
+            this.grpXSLT.TabStop = false;
+            this.grpXSLT.Text = "XSLT Style Sheet";
             // 
-            // textBox2
+            // tbXSLT
             // 
-            this.textBox2.Location = new System.Drawing.Point(8, 19);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(341, 304);
-            this.textBox2.TabIndex = 1;
+            this.tbXSLT.Location = new System.Drawing.Point(8, 19);
+            this.tbXSLT.Multiline = true;
+            this.tbXSLT.Name = "tbXSLT";
+            this.tbXSLT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbXSLT.Size = new System.Drawing.Size(341, 304);
+            this.tbXSLT.TabIndex = 1;
+            this.tbXSLT.Text = "XSLT Style Sheet";
             // 
-            // groupBox1
+            // grpXMLOutput
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(376, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(358, 329);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.grpXMLOutput.Controls.Add(this.btnLoadXMLOutput);
+            this.grpXMLOutput.Controls.Add(this.btnClearOutput);
+            this.grpXMLOutput.Controls.Add(this.tbOutput);
+            this.grpXMLOutput.Location = new System.Drawing.Point(740, 27);
+            this.grpXMLOutput.Name = "grpXMLOutput";
+            this.grpXMLOutput.Size = new System.Drawing.Size(358, 358);
+            this.grpXMLOutput.TabIndex = 9;
+            this.grpXMLOutput.TabStop = false;
+            this.grpXMLOutput.Text = "XML Output";
             // 
-            // textBox1
+            // tbOutput
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 19);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(341, 304);
-            this.textBox1.TabIndex = 1;
+            this.tbOutput.Location = new System.Drawing.Point(8, 19);
+            this.tbOutput.Multiline = true;
+            this.tbOutput.Name = "tbOutput";
+            this.tbOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbOutput.Size = new System.Drawing.Size(341, 304);
+            this.tbOutput.TabIndex = 1;
+            this.tbOutput.Text = "Output XML";
             // 
-            // groupBox2
+            // btnClearInput
             // 
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Location = new System.Drawing.Point(740, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(358, 329);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.btnClearInput.Location = new System.Drawing.Point(119, 327);
+            this.btnClearInput.Name = "btnClearInput";
+            this.btnClearInput.Size = new System.Drawing.Size(75, 23);
+            this.btnClearInput.TabIndex = 11;
+            this.btnClearInput.Text = "Clear";
+            this.btnClearInput.UseVisualStyleBackColor = true;
+            this.btnClearInput.Click += new System.EventHandler(this.btnClearInput_Click);
             // 
-            // textBox3
+            // btnClearOutput
             // 
-            this.textBox3.Location = new System.Drawing.Point(8, 19);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(341, 304);
-            this.textBox3.TabIndex = 1;
+            this.btnClearOutput.Location = new System.Drawing.Point(119, 327);
+            this.btnClearOutput.Name = "btnClearOutput";
+            this.btnClearOutput.Size = new System.Drawing.Size(75, 23);
+            this.btnClearOutput.TabIndex = 11;
+            this.btnClearOutput.Text = "Clear";
+            this.btnClearOutput.UseVisualStyleBackColor = true;
+            this.btnClearOutput.Click += new System.EventHandler(this.btnClearOutput_Click);
+            // 
+            // mainMenu
+            // 
+            this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.mainMenu.Location = new System.Drawing.Point(0, 0);
+            this.mainMenu.Name = "mainMenu";
+            this.mainMenu.Size = new System.Drawing.Size(1113, 24);
+            this.mainMenu.TabIndex = 10;
+            this.mainMenu.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem,
+            this.lToolStripMenuItem,
+            this.saveXSLTSheetToolStripMenuItem,
+            this.saveOutputToolStripMenuItem,
+            this.exitToolStripMenuItem1});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(36, 21);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.exitToolStripMenuItem.Text = "Load Input";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // lToolStripMenuItem
+            // 
+            this.lToolStripMenuItem.Name = "lToolStripMenuItem";
+            this.lToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.lToolStripMenuItem.Text = "Load XSLT Sheet";
+            this.lToolStripMenuItem.Click += new System.EventHandler(this.lToolStripMenuItem_Click);
+            // 
+            // btnLoadXSLTFromFile
+            // 
+            this.btnLoadXSLTFromFile.Location = new System.Drawing.Point(72, 327);
+            this.btnLoadXSLTFromFile.Name = "btnLoadXSLTFromFile";
+            this.btnLoadXSLTFromFile.Size = new System.Drawing.Size(149, 23);
+            this.btnLoadXSLTFromFile.TabIndex = 11;
+            this.btnLoadXSLTFromFile.Text = "Load XSLT From File...";
+            this.btnLoadXSLTFromFile.UseVisualStyleBackColor = true;
+            this.btnLoadXSLTFromFile.Click += new System.EventHandler(this.btnLoadXSLTFromFile_Click);
+            // 
+            // btnClearXSLT
+            // 
+            this.btnClearXSLT.Location = new System.Drawing.Point(8, 327);
+            this.btnClearXSLT.Name = "btnClearXSLT";
+            this.btnClearXSLT.Size = new System.Drawing.Size(58, 23);
+            this.btnClearXSLT.TabIndex = 12;
+            this.btnClearXSLT.Text = "Clear";
+            this.btnClearXSLT.UseVisualStyleBackColor = true;
+            this.btnClearXSLT.Click += new System.EventHandler(this.btnClearXSLT_Click);
+            // 
+            // saveXSLTSheetToolStripMenuItem
+            // 
+            this.saveXSLTSheetToolStripMenuItem.Name = "saveXSLTSheetToolStripMenuItem";
+            this.saveXSLTSheetToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.saveXSLTSheetToolStripMenuItem.Text = "Save XSLT Sheet";
+            this.saveXSLTSheetToolStripMenuItem.Click += new System.EventHandler(this.saveXSLTSheetToolStripMenuItem_Click);
+            // 
+            // saveOutputToolStripMenuItem
+            // 
+            this.saveOutputToolStripMenuItem.Name = "saveOutputToolStripMenuItem";
+            this.saveOutputToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.saveOutputToolStripMenuItem.Text = "Save Output";
+            this.saveOutputToolStripMenuItem.Click += new System.EventHandler(this.saveOutputToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem1
+            // 
+            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(169, 22);
+            this.exitToolStripMenuItem1.Text = "Exit";
+            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
+            // 
+            // btnPerformTransform
+            // 
+            this.btnPerformTransform.Location = new System.Drawing.Point(227, 327);
+            this.btnPerformTransform.Name = "btnPerformTransform";
+            this.btnPerformTransform.Size = new System.Drawing.Size(125, 23);
+            this.btnPerformTransform.TabIndex = 13;
+            this.btnPerformTransform.Text = "Execute Transform";
+            this.btnPerformTransform.UseVisualStyleBackColor = true;
+            this.btnPerformTransform.Click += new System.EventHandler(this.btnPerformTransform_Click);
+            // 
+            // btnLoadXMLInput
+            // 
+            this.btnLoadXMLInput.Location = new System.Drawing.Point(200, 327);
+            this.btnLoadXMLInput.Name = "btnLoadXMLInput";
+            this.btnLoadXMLInput.Size = new System.Drawing.Size(149, 23);
+            this.btnLoadXMLInput.TabIndex = 12;
+            this.btnLoadXMLInput.Text = "Load XML From File...";
+            this.btnLoadXMLInput.UseVisualStyleBackColor = true;
+            this.btnLoadXMLInput.Click += new System.EventHandler(this.btnLoadXMLInput_Click);
+            // 
+            // btnLoadXMLOutput
+            // 
+            this.btnLoadXMLOutput.Location = new System.Drawing.Point(200, 327);
+            this.btnLoadXMLOutput.Name = "btnLoadXMLOutput";
+            this.btnLoadXMLOutput.Size = new System.Drawing.Size(149, 23);
+            this.btnLoadXMLOutput.TabIndex = 12;
+            this.btnLoadXMLOutput.Text = "Load XML From File...";
+            this.btnLoadXMLOutput.UseVisualStyleBackColor = true;
+            this.btnLoadXMLOutput.Click += new System.EventHandler(this.btnLoadXMLOutput_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 374);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1113, 392);
+            this.Controls.Add(this.grpXMLOutput);
+            this.Controls.Add(this.grpXSLT);
+            this.Controls.Add(this.grpXMLInput);
+            this.Controls.Add(this.mainMenu);
+            this.MainMenuStrip = this.mainMenu;
             this.Name = "frmMain";
-            this.Text = "XSLT Tester Tool";
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Text = "XSLT Tester Tool - Calvin Hartwell";
+            this.grpXMLInput.ResumeLayout(false);
+            this.grpXMLInput.PerformLayout();
+            this.grpXSLT.ResumeLayout(false);
+            this.grpXSLT.PerformLayout();
+            this.grpXMLOutput.ResumeLayout(false);
+            this.grpXMLOutput.PerformLayout();
+            this.mainMenu.ResumeLayout(false);
+            this.mainMenu.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.GroupBox grpXMLInput;
+        private System.Windows.Forms.TextBox tbInput;
+        private System.Windows.Forms.GroupBox grpXSLT;
+        private System.Windows.Forms.TextBox tbXSLT;
+        private System.Windows.Forms.GroupBox grpXMLOutput;
+        private System.Windows.Forms.TextBox tbOutput;
+        private System.Windows.Forms.Button btnClearInput;
+        private System.Windows.Forms.Button btnClearOutput;
+        private System.Windows.Forms.MenuStrip mainMenu;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Button btnClearXSLT;
+        private System.Windows.Forms.Button btnLoadXSLTFromFile;
+        private System.Windows.Forms.ToolStripMenuItem lToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveXSLTSheetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveOutputToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.Button btnPerformTransform;
+        private System.Windows.Forms.Button btnLoadXMLInput;
+        private System.Windows.Forms.Button btnLoadXMLOutput;
     }
 }
 
